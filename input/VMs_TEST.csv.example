@@ -1,0 +1,2 @@
+"Office","VMName","OSVersion","VMwareToolsVersion","FQDN","IPAddress","VLAN","Backup","OSLastUpdate","Description","User","Access"
+"TEST","test-fs","Windows Server 2019 Datacenter / 1809","10.3.10","test-fs.example.net","192.168.5.5","50","","2023.11.02 00:00","Файловый сервер. Архив видео.  ","Иванов",""

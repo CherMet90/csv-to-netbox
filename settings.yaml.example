@@ -1,0 +1,3 @@
+# ИМЯ площадки в csv-файле: site_slug площадки в netbox
+site_slugs:
+  TEST: test
