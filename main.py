@@ -74,18 +74,18 @@ for file in csv_files:
                 logger.info(f'Processing VM: {row["VMName"]}...')
                 # Парсим
                 vm = VM(
-                    site = row['Office'],
-                    name = row['VMName'],
-                    vlan = row['VLAN'],
-                    ip = row['IPAddress'],
-                    fqdn = row['FQDN'],
-                    user = row['User'],
-                    access = row['Access'],
-                    description = row['Description'],
-                    os = row['OSVersion'],
-                    os_last_update = row['OSLastUpdate'],
-                    vmtools_version = row['VMwareToolsVersion'],
-                    backup = row['Backup'],
+                    site=row.get('Office', None),
+                    name=row.get('VMName', None),
+                    vlan=row.get('VLAN', None),
+                    ip=row.get('IPAddress', None),
+                    fqdn=row.get('FQDN', None),
+                    user=row.get('User', None),
+                    access=row.get('Access', None),
+                    description=row.get('Description', None),
+                    os=row.get('OSVersion', None),
+                    os_last_update=row.get('OSLastUpdate', None),
+                    vmtools_version=row.get('VMwareToolsVersion', None),
+                    backup=row.get('Backup', None),
                 )
                 # Создаем ВМ в Netbox
                 netbox_vm = NetboxDevice(
