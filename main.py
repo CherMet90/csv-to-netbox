@@ -101,7 +101,10 @@ for file in csv_files:
                 )
                 # Добавляем платформу(ОС)
                 if vm.os:
-                    netbox_vm.get_platform(vm.os)
+                    netbox_vm.set_platform(vm.os)
+                # Назначаем владельца
+                if vm.user:
+                    netbox_vm.set_tenant(vm.user, vm.name)
                 # Добавляем интерфейсы
                 for i in vm.interfaces:
                     netbox_vm.add_interface(i)
