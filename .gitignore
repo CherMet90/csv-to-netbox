@@ -5,3 +5,5 @@ settings.yaml
 *.log
 input/*.csv
 input/backup/
+main.py.backup
+input/*.xlsx
