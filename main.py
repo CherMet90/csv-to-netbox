@@ -57,7 +57,10 @@ class Interface:
         self.name = name if name else f'NIC {i}'
         self.type = type if type else 'virtual'
         self.ip_address = ip
-        self.ip_with_prefix = f'{ip}/{NetboxDevice.get_prefix_for_ip(ip).prefix.split("/")[1]}'
+        try:
+            self.ip_with_prefix = f'{ip}/{NetboxDevice.get_prefix_for_ip(ip).prefix.split("/")[1]}'
+        except Error:
+            pass
 
 
 # load settings from yaml file
